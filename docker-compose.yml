@@ -1,13 +1,13 @@
 services:
   frontend:
-    image: csbs1-frontend:latest
+    build: ./frontend
     ports:
       - "80:80"
     networks:
       - common-network
 
   backend:
-    image: csbs1-backend:latest
+    build: ./dummy-backend
     ports:
       - "3000:3000"
     networks:
